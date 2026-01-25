@@ -3,7 +3,7 @@ import cv2
 import tensorflow as tf
 from utils.gamma import gamma_correction
 
-MODEL_PATH = "./train/model_fire_int8.tflite"
+MODEL_PATH = "./train/model_fire_a35_int8.tflite"
 LABELS = ["Nao fogo", "Fogo"]
 THRESHOLD = 0.50
 HEIGHT = 96

@@ -39,7 +39,7 @@ def create_model():
     x = keras.layers.Rescaling(1.0 / 127.5, offset=-1)(inputs)
 
     base_model = keras.applications.MobileNetV2(
-        input_shape=INPUT_SHAPE, include_top=False, weights="imagenet"
+        input_shape=INPUT_SHAPE, include_top=False, weights="imagenet", alpha=0.35
     )
     base_model.trainable = False
 
@@ -119,9 +119,7 @@ def run():
     print("=" * 30 + "\n")
 
     print("--- Exportando TFLite ---")
-    convert_to_tflite(
-        model, train_ds, "model_fire_bright100epochs_int8.tflite", quantize_int8=True
-    )
+    convert_to_tflite(model, train_ds, "model_fire_a35_int8.tflite", quantize_int8=True)
 
     with open("labels.txt", "w") as f:
         f.write("0\n1\n")
