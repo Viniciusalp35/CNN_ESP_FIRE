@@ -38,9 +38,6 @@ def create_model():
 
     x = keras.layers.Rescaling(1.0 / 127.5, offset=-1)(inputs)
 
-    x = keras.layers.RandomBrightness(factor=0.3)(x)
-    x = keras.layers.RandomContrast(factor=0.3)(x)
-
     base_model = keras.applications.MobileNetV2(
         input_shape=INPUT_SHAPE, include_top=False, weights="imagenet"
     )
