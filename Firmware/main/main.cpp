@@ -9,8 +9,8 @@
 #include "classifier.h"
 
 // --- CONFIG ---
-#define SSID "FLM_2"
-#define PASS "F.L.M@casa:2024"
+#define SSID "NOME_REDE"
+#define PASS "SENHA_REDE"
 
 // Pinos AI-Thinker
 #define PWDN_GPIO_NUM 32
