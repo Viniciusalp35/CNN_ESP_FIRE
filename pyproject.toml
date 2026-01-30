@@ -1,0 +1,7 @@
+[dependency-groups]
+dev = [
+    "numpy>=1.26.4",
+    "opencv-python>=4.11.0.86",
+    "tensorflow>=2.18.1",
+    "tensorflow-model-optimization>=0.8.0",
+]
